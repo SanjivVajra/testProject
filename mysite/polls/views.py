@@ -6,3 +6,12 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse('Awesome, Index page of application')
+
+def detail(request, question_id):
+    return HttpResponse("deteil version of question %s" % question_id)
+
+def result(request, question_id):
+    return HttpResponse("detail vew of answer %s" % question_id)
+
+def vote(request, question_id):
+    return HttpResponse("vote Question %s" % question_id)
