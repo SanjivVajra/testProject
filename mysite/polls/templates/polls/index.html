@@ -6,5 +6,20 @@
 </head>
 <body>
 
+{% if latest_questions %}
+    <ul>
+    {% for question in latest_questions %}
+        <li>
+            <a href = '/polls/{{question.id}}'><b> {{question.question_text}} </b></a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>no questions.</p>
+{% endif %}
+
+
+
+
 </body>
 </html>
